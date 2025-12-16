@@ -6,36 +6,12 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-## 🗄️ SQL-Focused Project
-
-This project demonstrates **advanced SQL database design and operations** using **PostgreSQL** for real-time cluster monitoring. The core focus is on:
-- **SQL DDL** for schema design and table creation
-- **SQL DML** for data insertion and manipulation
-- **SQL Analytics** for performance monitoring queries
-- **PostgreSQL** database administration and optimization
-- **Relational database modeling** with foreign keys and constraints
-
 ## Introduction
 This project simulates a lightweight **Linux cluster monitoring system** for tracking server hardware and resource utilization across multiple nodes.  
 The system automatically collects **hardware specifications** and **real-time usage metrics** (CPU, memory, and disk) from Linux hosts and stores them in a centralized **PostgreSQL database** running in a **Docker container**.
 
 The collected data enables **Linux Cluster Administrators (LCA)** to analyze system performance and make informed decisions about resource scaling.  
-The project leverages **PostgreSQL (SQL)**, **Bash scripting**, **Docker**, **Git**, and **crontab** to demonstrate real-world database engineering and DevOps automation workflows.
-
-## 🛠️ Tech Stack
-
-### Core SQL Technologies
-- **PostgreSQL** - Advanced relational database management system
-- **SQL DDL** - Data Definition Language for schema creation (`sql/ddl.sql`)
-- **SQL DML** - Data Manipulation Language for INSERT operations
-- **SQL Queries** - Analytical queries for performance monitoring (`sql/queries.sql`)
-- **Foreign Keys & Constraints** - Referential integrity and data validation
-- **psql** - PostgreSQL command-line interface
-
-### Supporting Technologies
-- **Bash Scripting** - Automation and data collection
-- **Docker** - Containerized PostgreSQL deployment
-- **Crontab** - Scheduled SQL data collection
+The project leverages **Bash scripting**, **Docker**, **PostgreSQL**, **Git**, and **crontab** to demonstrate real-world DevOps automation and data engineering workflows.
 
 ## Quick Start
 ```bash
@@ -107,18 +83,13 @@ Automates periodic execution of `host_usage.sh` for continuous monitoring.
 ---
 
 #### `queries.sql`
-Contains **advanced SQL queries** for cluster analytics, demonstrating:
-- **Aggregate functions** (AVG, SUM, COUNT) for performance metrics
-- **JOIN operations** between `host_info` and `host_usage` tables
-- **Window functions** for time-series analysis
-- **Subqueries** for complex data retrieval
+Contains SQL queries for cluster analytics, such as:
 - Average CPU usage per host
 - Memory usage trends over time
 - Available disk space analysis
 
-These SQL queries help administrators with capacity planning and performance optimization.
-
-## 📊 SQL Database Modeling
+These help administrators with capacity planning and performance optimization.
+##  Database Modeling
 
 ### `host_info`
 | Column | Type | Description |
